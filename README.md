@@ -7,6 +7,7 @@
 
 
 <br>
+
 ### **주요 파일 설명**
 + **"KoBERT_NER_KMOU_for_119NER.ipynb"**
   + KoBERT 기반의 개체명 인식 모델을 구현하는 과정 및 코드가 작성된 파일입니다.
@@ -21,6 +22,7 @@
   + KoBERT의 SentencePiece tokenization 기능이 작성된 파일입니다.
   
 <br>
+
 ### **사용법**
 + **"KoBERT_NER_KMOU_for_119NER.ipynb"를 제외하고, 모두 같은 폴더에 설치한 뒤, "119ner.py"를 실행하면 됩니다.** 
   + "requirements.txt"를 통해 필요한 패키지 및 라이브러리를 설치를 한 번에 진행하면 더욱 수월합니다.
@@ -31,6 +33,7 @@
   + https://drive.google.com/file/d/16Vjpc1WlhL7jov-RvtvF95zWD4CWSb41/view?usp=sharing
 
 <br>
+
 ### **참고**
 + ETRI 음성인식 open API : https://aiopen.etri.re.kr/guide_recognition.php
 + 한국해양대학교 개체명 코퍼스 : https://github.com/kmounlp/NER
@@ -40,15 +43,18 @@
 
 
 <br>
+
 ## 119NER 구현 과정
 <p align="center"><img src="https://user-images.githubusercontent.com/46772883/101279555-57448680-3806-11eb-9f6f-17de4d10402a.png" /></p>
 
 <br>
+
 ### 음성 -> 텍스트 구현
 1. 사용자의 발화를 녹음하고, 오디오 파일로 생성하도록 합니다.
 2. 해당 오디오 파일을 ETRI의 음성인식 API 서버로 전달하여 인식 결과를 텍스트로 받습니다.
 
 <br>
+
 ### KoBERT 기반 개체명 인식 모델 구현
 _세부 과정은 "KoBERT_NER_KMOU_for_119NER.ipynb"에 작성되어있습니다._  
 
