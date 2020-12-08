@@ -1,8 +1,9 @@
 # **119NER**
-<p align="center"><img src="https://user-images.githubusercontent.com/46772883/101279253-5c083b00-3804-11eb-9558-63f6623a19c8.png" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/64311243/101432657-98df4980-394c-11eb-8861-328cccb658a6.png" /></p>
 
-**언어모델 기반 개체명 인식 기술을 활용한 119 신고 접수 도움 서비스로, 신고자의 음성에서  
-(피해 장소, 피해 유형, 피해 인원) 등의 주요 개체들을 인식하여 빠르고 정확한 상황 요약을 제공합니다.**
+**언어모델 기반 개체명 인식 기술을 활용한 119 신고 접수 도움 서비스로,  
+신고자의 음성 내용을 분석하여, [피해 장소], [피해 유형], [피해 인원]을 파악하여,
+신고 접수 소방대원과 출동 소방대원에게 도움을 주는 것을 목표로 합니다.**
 
 
 <br>
@@ -19,7 +20,7 @@
   + 임의의 문장이 구현된 개체명 인식 모델을 통과한 결과를 일정한 출력 형태로 맞추는 역할을 합니다.
 + **"tokenization_kobert.py"**
   + KoBERT의 SentencePiece tokenization 기능이 작성된 파일입니다.
-
+  
 ### **사용법**
 + **"KoBERT_NER_KMOU_for_119NER.ipynb"를 제외하고, 모두 같은 폴더에 설치한 뒤, "119ner.py"를 실행하면 됩니다.** 
   + "requirements.txt"를 통해 필요한 패키지 및 라이브러리를 설치를 한 번에 진행하면 더욱 수월합니다.
@@ -28,8 +29,7 @@
   + 발급 후  "119NER.py" 파일의 287 line에서 accessKey 변수에 키 값을 대입하면 됩니다.
 + **구현한 개체명 인식 모델은 용량 문제로 구글 드라이브에서 공유했습니다. 해당 url을 통해 "119ner.py"와 같은 폴더에 내려받으면 됩니다.**
   + https://drive.google.com/file/d/16Vjpc1WlhL7jov-RvtvF95zWD4CWSb41/view?usp=sharing
-
-
+  
 ### **참고**
 + ETRI 음성인식 open API : https://aiopen.etri.re.kr/guide_recognition.php
 + 한국해양대학교 개체명 코퍼스 : https://github.com/kmounlp/NER
@@ -85,7 +85,8 @@ _세부 과정은 "KoBERT_NER_KMOU_for_119NER.ipynb"에 작성되어있습니다
 ### 구현 모델의 인식 결과를 가공 및 정리하는 코드 구현
 **1. 인식 결과 가공**
 + 토큰 형태로 반환되는 결과를 다시 단어들로 결합합니다.
-  + SentencePiece tokenization의 구분자인 '▁'를 활용했습니다.
++ SentencePiece tokenization의 구분자인 '▁'를 활용했습니다.
+  
 **2. 결과 정리**
 + 출력될 결과를 일정한 형태로 맞추기 위해 구현한 규칙 기반 모델에 통과시킵니다.
 + 통과한 결과를 기반으로 요약문을 생성합니다.
