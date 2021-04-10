@@ -6,7 +6,7 @@
 
 * blog : https://kxmjhwn.tistory.com/239?category=1121129
 
-* 주요 파일 설
+* 주요 파일 설명
   
     * KoBERT_NER_KMOU_for_119NER_(modified).ipynb : KoBERT 기반의 개체명 인식 모델을 구현하는 과정 및 코드가 작성된 파일
     
